@@ -3,11 +3,11 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from IstkharMusic import app
-from IstkharMusic.utils import help_pannel
-from IstkharMusic.utils.database import get_lang
-from IstkharMusic.utils.decorators.language import LanguageStart, languageCB
-from IstkharMusic.utils.inline.help import help_back_markup, private_help_panel
+from KrishnaMuzic import app
+from KrishnaMuzic.utils import help_pannel
+from KrishnaMuzic.utils.database import get_lang
+from KrishnaMuzic.utils.decorators.language import LanguageStart, languageCB
+from KrishnaMuzic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
 
@@ -59,3 +59,4 @@ async def helper_cb(client, CallbackQuery, _):
     keyboard = help_back_markup(_)
     text = helpers.HELP_16.format(app.name) if cb == "hb16" else getattr(helpers, f"HELP_{cb[2:]}")
     await CallbackQuery.edit_message_text(text, reply_markup=keyboard)
+

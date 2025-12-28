@@ -5,11 +5,11 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from KrishnaMusic import LOGGER, app, userbot
-from KrishnaMusic.core.call import KRISHNA
-from KrishnaMusic.misc import sudo
-from KrishnaMusic.plugins import ALL_MODULES
-from KrishnaMusic.utils.database import get_banned_users, get_gbanned
+from KrishnaMuzic import LOGGER, app, userbot
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.misc import sudo
+from KrishnaMuzic.plugins import ALL_MODULES
+from KrishnaMuzic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
 
@@ -35,29 +35,30 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("KrishnaMusic.plugins" + all_module)
-    LOGGER("KrishnaMusic.plugins").info("Successfully Imported Modules...")
+        importlib.import_module("KrishnaMuzic.plugins" + all_module)
+    LOGGER("KrishnaMuzic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
     await KRISHNA.start()
     try:
         await KRISHNA.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("KrishnaMusic").error(
+        LOGGER("KrishnaMuzic").error(
             "Please turn on the videochat of your log group\channel.\n\nStopping Bot..."
         )
         exit()
     except:
         pass
     await KRISHNA.decorators()
-    LOGGER("KrishnaMusic").info(
+    LOGGER("KrishnaMuzic").info(
         "\x41\x76\x69\x61\x78\x20\x4d\x75\x73\x69\x63\x20\x53\x74\x61\x72\x74\x65\x64\x20\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6c\x6c\x79\x2e\x0a\x0a\x44\x6f\x6e\x27\x74\x20\x66\x6f\x72\x67\x65\x74\x20\x74\x6f\x20\x76\x69\x73\x69\x74\x20\x40\x4e\x65\x78\x47\x65\x6e\x42\x6f\x74\x73"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("KrishnaMusic").info("Stopping KRISHNA Music Bot...")
+    LOGGER("KrishnaMuzic").info("Stopping KRISHNA Music Bot...")
 
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 

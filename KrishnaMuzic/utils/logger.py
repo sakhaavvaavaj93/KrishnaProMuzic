@@ -1,7 +1,7 @@
 from pyrogram.enums import ParseMode
 
-from IstkharMusic import app
-from IstkharMusic.utils.database import is_on_off
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.database import is_on_off
 from config import LOG_GROUP_ID
 
 
@@ -31,3 +31,4 @@ async def play_logs(message, streamtype):
             except:
                 pass
         return
+

@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from KrishnaMuzic import app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.utils.database import is_music_playing, music_on
 from KrishnaMuzic.utils.decorators import AdminRightsCheck
 from KrishnaMuzic.utils.inline import close_markup
@@ -24,3 +24,4 @@ async def resume_com(cli, message: Message, _, chat_id):
         reply_markup=close_markup(_)
 
     )
+

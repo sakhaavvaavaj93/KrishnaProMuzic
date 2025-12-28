@@ -4,17 +4,17 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.formatters import alpha_to_int
+from KrishnaMuzic.utils.decorators.language import language
+from KrishnaMuzic.utils.formatters import alpha_to_int
 from config import adminlist
 
 IS_BROADCASTING = False
@@ -228,3 +228,4 @@ async def auto_clean():
 
 
 asyncio.create_task(auto_clean())
+

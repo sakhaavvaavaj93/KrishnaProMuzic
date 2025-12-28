@@ -11,9 +11,9 @@ from pytgcalls import PyTgCalls, exceptions, types
 from pytgcalls.pytgcalls_session import PyTgCallsSession
 
 import config
-from IstkharMusic import LOGGER, YouTube, app
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import LOGGER, YouTube, app
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -25,11 +25,11 @@ from IstkharMusic.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from IstkharMusic.utils.exceptions import AssistantErr
-from IstkharMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
-from IstkharMusic.utils.inline.play import stream_markup
-from IstkharMusic.utils.stream.autoclear import auto_clean
-from IstkharMusic.utils.thumbnails import gen_thumb
+from KrishnaMuzic.utils.exceptions import AssistantErr
+from KrishnaMuzic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from KrishnaMuzic.utils.inline.play import stream_markup
+from KrishnaMuzic.utils.stream.autoclear import auto_clean
+from KrishnaMuzic.utils.thumbnails import gen_thumb
 from strings import get_string
 
 autoend = {}
@@ -520,5 +520,6 @@ class Call(PyTgCalls):
                         types.ChatUpdate.Status.CLOSED_VOICE_CHAT,
                     ]:
                         await self.stop_stream(update.chat_id)
+
 
 ISTKHAR = Call()

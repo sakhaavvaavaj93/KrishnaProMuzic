@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from IstkharMusic.utils.decorators.language import language
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from KrishnaMuzic.utils.decorators.language import language
 from config import BANNED_USERS
 
 
@@ -59,3 +59,4 @@ async def all_chats(client, message: Message, _):
         await message.reply_text(_["black_8"].format(app.mention))
     else:
         await message.reply_text(text)
+

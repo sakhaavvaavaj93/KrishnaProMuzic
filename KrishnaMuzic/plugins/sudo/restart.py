@@ -10,9 +10,9 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from IstkharMusic import app
-from IstkharMusic.misc import HAPP, SUDOERS, XCB
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import HAPP, SUDOERS, XCB
+from KrishnaMuzic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
@@ -135,3 +135,4 @@ async def restart_(_, message):
         "» ʀᴇsᴛᴀʀᴛ ᴘʀᴏᴄᴇss sᴛᴀʀᴛᴇᴅ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ ғᴏʀ ғᴇᴡ sᴇᴄᴏɴᴅs ᴜɴᴛɪʟ ᴛʜᴇ ʙᴏᴛ sᴛᴀʀᴛs..."
     )
     os.system(f"kill -9 {os.getpid()} && bash start")
+

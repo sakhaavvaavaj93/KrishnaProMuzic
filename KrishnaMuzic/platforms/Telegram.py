@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from IstkharMusic import app
-from IstkharMusic.utils.formatters import (
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
@@ -174,3 +174,4 @@ class TeleAPI:
             return False
         config.lyrical.pop(mystic.id)
         return True
+

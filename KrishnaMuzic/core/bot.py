@@ -10,7 +10,7 @@ import config
 from ..logging import LOGGER
 
 
-class ISTKHAR(Client):
+class KRISHNA(Client):
     def __init__(self):
         LOGGER(__name__).info("Starting Bot...")
         super().__init__(
@@ -56,3 +56,4 @@ class ISTKHAR(Client):
 
     async def stop(self):
         await super().stop()
+

@@ -12,15 +12,6 @@ from KrishnaMuzic.plugins import ALL_MODULES
 from KrishnaMuzic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
 
-from pyrogram import Client
-# You must call the class with parentheses () to create an instance
-KRISHNA = Client(
-    "my_bot_session",
-    api_id=API_ID,
-    api_hash=API_HASH,
-    bot_token=BOT_TOKEN
-)
-
 async def init():
     if (
         not config.STRING1
@@ -68,6 +59,7 @@ async def init():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 
 
 

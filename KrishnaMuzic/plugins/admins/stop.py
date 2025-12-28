@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from KrishnaMuzic import app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.utils.database import set_loop
 from KrishnaMuzic.utils.decorators import AdminRightsCheck
 from KrishnaMuzic.utils.inline import close_markup
@@ -22,5 +22,6 @@ async def stop_music(cli, message: Message, _, chat_id):
         _["admin_5"].format(message.from_user.mention),
         reply_markup=close_markup(_)
     )
+
 
 

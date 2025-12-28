@@ -1,7 +1,7 @@
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message, User
 
-from IstkharMusic import app
+from KrishnaMuzic import app
 
 
 async def extract_user(m: Message) -> User:
@@ -15,3 +15,4 @@ async def extract_user(m: Message) -> User:
         if m.command[1].isdecimal()
         else m.command[1]
     )
+

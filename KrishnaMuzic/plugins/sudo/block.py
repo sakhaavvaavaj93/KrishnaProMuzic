@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import add_gban_user, remove_gban_user
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.extraction import extract_user
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import add_gban_user, remove_gban_user
+from KrishnaMuzic.utils.decorators.language import language
+from KrishnaMuzic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
@@ -57,3 +57,4 @@ async def sudoers_list(client, message: Message, _):
         return await mystic.edit_text(_["block_5"])
     else:
         return await mystic.edit_text(msg)
+

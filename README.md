@@ -92,6 +92,10 @@ API_KEY=your-api-key-here
 ## 🚀 Deploy on Heroku 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/sakhaavvaavaj93/KrishnaProMuzic)
 
+<p align="center">
+<a href="https://render.com/deploy?repo=https://github.com/sakhaavvaavaj93/KrishnaProMuzic"><img src="https://img.shields.io/badge/-Deploy%20to%20Render-blackorange?style=for-the-badge&logo=render"></a>
+</p>
+
 ---
 
 ### 🔧 Quick Setup

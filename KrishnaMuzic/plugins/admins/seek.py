@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.misc import db
-from IstkharMusic.utils import AdminRightsCheck, seconds_to_min
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic import YouTube, app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils import AdminRightsCheck, seconds_to_min
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -60,7 +60,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await ISTKHAR.seek_stream(
+        await KRISHNA.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
@@ -76,4 +76,5 @@ async def seek_comm(cli, message: Message, _, chat_id):
     await mystic.edit_text(
         text=_["admin_25"].format(seconds_to_min(to_seek), message.from_user.mention),
         reply_markup=close_markup(_),
+
     )

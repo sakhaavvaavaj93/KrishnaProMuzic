@@ -11,10 +11,10 @@ from pyrogram.types import (
 from py_yt import VideosSearch
 
 import config
-from IstkharMusic import app
-from IstkharMusic.misc import _boot_
-from IstkharMusic.plugins.sudo.sudoers import sudoers_list
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import _boot_
+from KrishnaMuzic.plugins.sudo.sudoers import sudoers_list
+from KrishnaMuzic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -22,10 +22,10 @@ from IstkharMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from IstkharMusic.utils import bot_sys_stats
-from IstkharMusic.utils.decorators.language import LanguageStart
-from IstkharMusic.utils.formatters import get_readable_time
-from IstkharMusic.utils.inline import help_pannel, private_panel, start_panel
+from KrishnaMuzic.utils import bot_sys_stats
+from KrishnaMuzic.utils.decorators.language import LanguageStart
+from KrishnaMuzic.utils.formatters import get_readable_time
+from KrishnaMuzic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
@@ -143,7 +143,7 @@ async def start_gp(client, message: Message, _):
 async def api_console_cb(client, query: CallbackQuery):
     await query.message.edit_caption(
         caption="""
-🚀 **NEXGENBOTS API Console**
+🚀 **PANDAVA API Console**
 
 Fast, reliable & developer-friendly API access.
 
@@ -264,4 +264,5 @@ async def welcome(client, message: Message):
                 await message.stop_propagation()
 
         except Exception as ex:
+
             print(ex)

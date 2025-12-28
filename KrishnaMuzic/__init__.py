@@ -1,8 +1,8 @@
-from KrishnaMusic.core.bot import KRISHNA
-from KrishnaMusic.core.dir import dirr
-from KrishnaMusic.core.git import git
-from KrishnaMusic.core.userbot import Userbot
-from KrishnaMusic.misc import dbb, heroku
+from KrishnaMuzic.core.bot import KRISHNA
+from KrishnaMuzic.core.dir import dirr
+from KrishnaMuzic.core.git import git
+from KrishnaMuzic.core.userbot import Userbot
+from KrishnaMuzic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -24,4 +24,5 @@ Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
+
 

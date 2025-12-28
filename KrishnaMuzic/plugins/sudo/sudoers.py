@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import add_sudo, remove_sudo
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.extraction import extract_user
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import add_sudo, remove_sudo
+from KrishnaMuzic.utils.decorators.language import language
+from KrishnaMuzic.utils.extraction import extract_user
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 
@@ -69,3 +69,4 @@ async def sudoers_list(client, message: Message, _):
         await message.reply_text(_["sudo_7"])
     else:
         await message.reply_text(text, reply_markup=close_markup(_))
+

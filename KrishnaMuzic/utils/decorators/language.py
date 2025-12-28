@@ -1,5 +1,5 @@
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import get_lang, is_maintenance
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import get_lang, is_maintenance
 from config import SUPPORT_GROUP
 from strings import get_string
 
@@ -55,3 +55,4 @@ def LanguageStart(mystic):
         return await mystic(_, message, language)
 
     return wrapper
+

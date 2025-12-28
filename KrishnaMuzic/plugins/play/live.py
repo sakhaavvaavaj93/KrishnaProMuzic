@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.utils.channelplay import get_channeplayCB
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.stream.stream import stream
+from KrishnaMuzic import YouTube, app
+from KrishnaMuzic.utils.channelplay import get_channeplayCB
+from KrishnaMuzic.utils.decorators.language import languageCB
+from KrishnaMuzic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 
@@ -59,3 +59,4 @@ async def play_live_stream(client, CallbackQuery, _):
     else:
         return await mystic.edit_text("» ɴᴏᴛ ᴀ ʟɪᴠᴇ sᴛʀᴇᴀᴍ.")
     await mystic.delete()
+

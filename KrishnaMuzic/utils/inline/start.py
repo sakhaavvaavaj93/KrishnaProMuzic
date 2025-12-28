@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 import config
-from IstkharMusic import app
+from KrishnaMuzic import app
 
 
 def start_panel(_):
@@ -41,3 +41,4 @@ def private_panel(_):
         ],
     ]
     return buttons
+

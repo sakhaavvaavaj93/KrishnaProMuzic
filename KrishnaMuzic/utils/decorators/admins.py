@@ -1,9 +1,9 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS, db
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS, db
+from KrishnaMuzic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,
@@ -201,3 +201,4 @@ def ActualAdminCB(mystic):
         return await mystic(client, CallbackQuery, _)
 
     return wrapper
+

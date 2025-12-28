@@ -1,8 +1,8 @@
-from IstkharMusic.core.bot import ISTKHAR
-from IstkharMusic.core.dir import dirr
-from IstkharMusic.core.git import git
-from IstkharMusic.core.userbot import Userbot
-from IstkharMusic.misc import dbb, heroku
+from KrishnaMusic.core.bot import KRISHNA
+from KrishnaMusic.core.dir import dirr
+from KrishnaMusic.core.git import git
+from KrishnaMusic.core.userbot import Userbot
+from KrishnaMusic.misc import dbb, heroku
 
 from .logging import LOGGER
 
@@ -11,7 +11,7 @@ git()
 dbb()
 heroku()
 
-app = ISTKHAR()
+app = KRISHNA()
 userbot = Userbot()
 
 
@@ -24,3 +24,4 @@ Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
 YouTube = YouTubeAPI()
+

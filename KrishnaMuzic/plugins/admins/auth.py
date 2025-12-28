@@ -1,16 +1,16 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.utils import extract_user, int_to_alpha
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.utils import extract_user, int_to_alpha
+from KrishnaMuzic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from IstkharMusic.utils.decorators import AdminActual, language
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic.utils.decorators import AdminActual, language
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 AUTH_LIMIT = 25
 
@@ -99,5 +99,6 @@ async def authusers(client, message: Message, _):
 
         text += f"{count}➤ {user_name} [<code>{user_id}</code>]\n"
         text += f"   {_['auth_8']} {admin_name} [<code>{admin_id}</code>]\n\n"
+
 
     await mystic.edit_text(text, reply_markup=close_markup(_))

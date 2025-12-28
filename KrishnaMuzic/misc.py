@@ -5,7 +5,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from IstkharMusic.core.mongo import mongodb
+from KrishnaMuzic.core.mongo import mongodb
 
 from .logging import LOGGER
 
@@ -73,3 +73,4 @@ def heroku():
                 LOGGER(__name__).warning(
                     f"Please make sure your Heroku API Key and Your App name are configured correctly in the heroku."
                 )
+

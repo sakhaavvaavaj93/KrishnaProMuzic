@@ -10,8 +10,8 @@ from typing import Union
 from pyrogram.enums import MessageEntityType
 from pyrogram.types import Message
 from py_yt import VideosSearch, Playlist
-from IstkharMusic.utils.database import is_on_off
-from IstkharMusic.utils.formatters import time_to_seconds
+from KrishnaMuzic.utils.database import is_on_off
+from KrishnaMuzic.utils.formatters import time_to_seconds
 
 from config import API_URL, VIDEO_API_URL, API_KEY
 
@@ -591,4 +591,5 @@ class YouTubeAPI:
         else:
             direct = True
             downloaded_file = await download_song(link)
+
         return downloaded_file, direct

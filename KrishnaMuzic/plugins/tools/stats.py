@@ -10,19 +10,19 @@ from pytgcalls.__version__ import __version__ as pytgver
 from ntgcalls import __version__ as ntgver
 
 import config
-from IstkharMusic import app
-from IstkharMusic.core.userbot import assistants
-from IstkharMusic.misc import SUDOERS, mongodb
-from IstkharMusic.plugins import ALL_MODULES
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.core.userbot import assistants
+from KrishnaMuzic.misc import SUDOERS, mongodb
+from KrishnaMuzic.plugins import ALL_MODULES
+from KrishnaMuzic.utils.database import (
     get_served_chats,
     get_served_users,
     get_sudoers,
     is_autoend,
     is_autoleave,
 )
-from IstkharMusic.utils.decorators.language import language, languageCB
-from IstkharMusic.utils.inline.stats import back_stats_buttons, stats_buttons
+from KrishnaMuzic.utils.decorators.language import language, languageCB
+from KrishnaMuzic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 async def answer_callback(query: CallbackQuery, text: str = None, alert: bool = False):
@@ -157,4 +157,5 @@ async def bot_stats(client, CallbackQuery, _):
     except MessageIdInvalid:
         await CallbackQuery.message.reply_photo(
             photo=config.STATS_IMG_URL, caption=text, reply_markup=markup
+
         )

@@ -5,12 +5,12 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import get_assistant, get_authuser_names, get_cmode
-from IstkharMusic.utils.decorators import ActualAdminCB, AdminActual, language
-from IstkharMusic.utils.formatters import alpha_to_int, get_readable_time
+from KrishnaMuzic import app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.database import get_assistant, get_authuser_names, get_cmode
+from KrishnaMuzic.utils.decorators import ActualAdminCB, AdminActual, language
+from KrishnaMuzic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
@@ -53,7 +53,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await ISTKHAR.stop_stream_force(message.chat.id)
+        await KRISHNA.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -80,7 +80,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await ISTKHAR.stop_stream_force(chat_id)
+            await KRISHNA.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))
@@ -121,3 +121,4 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
         except:
             return await CallbackQuery.answer(_["tg_8"], show_alert=True)
     await CallbackQuery.answer(_["tg_9"], show_alert=True)
+

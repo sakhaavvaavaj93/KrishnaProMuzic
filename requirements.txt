@@ -1,3 +1,4 @@
+git+https://github.com/sakhaavvaavaj93/KrishnaProMuzic
 aiofiles
 aiohttp
 beautifulsoup4
@@ -26,4 +27,5 @@ yt-dlp
 youtube-search
 youtube-search-python
 py-yt-search
+
 

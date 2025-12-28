@@ -3,15 +3,15 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 from pytgcalls.exceptions import NoActiveGroupCall
 import config
-from IstkharMusic import app
-from IstkharMusic.misc import db
-from IstkharMusic.core.call import ISTKHAR, autoend, counter
-from IstkharMusic.utils.database import get_client, set_loop, is_active_chat, is_autoend, is_autoleave
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.core.call import KRISHNA, autoend, counter
+from KrishnaMuzic.utils.database import get_client, set_loop, is_active_chat, is_autoend, is_autoleave
 import logging
 
 async def auto_leave():
     while not await asyncio.sleep(900):
-        from IstkharMusic.core.userbot import assistants
+        from KrishnaMuzic.core.userbot import assistants
         ender = await is_autoleave()
         if not ender:
             continue
@@ -27,7 +27,7 @@ async def auto_leave():
                     ]:
                         if (
                             i.chat.id != config.LOG_GROUP_ID
-                            and i.chat.id != -1002016928980 and i.chat.id != -1002200386150 and i.chat.id != -1001397779415
+                            and i.chat.id != -1001836385176
                         ):
                             if left == 20:
                                 continue
@@ -58,7 +58,7 @@ async def auto_end():
             for chat_id in chatss:
                 nocall = False
                 try:
-                    assistant = await group_assistant(ISTKHAR, chat_id)
+                    assistant = await group_assistant(KRISHNA, chat_id)
                     participants = await assistant.get_participants(chat_id)
                     users = len(participants)
                 except NoActiveGroupCall:
@@ -104,3 +104,4 @@ async def auto_end():
 
 
 asyncio.create_task(auto_end())
+

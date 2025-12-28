@@ -37,7 +37,8 @@ async def init():
         importlib.import_module("KrishnaMuzic.plugins" + all_module)
     LOGGER("KrishnaMuzic.plugins").info("Successfully Imported Modules...")
     await userbot.start()
-    await KRISHNA.start()
+    krishna = KRISHNA()
+    await krishna.start()
     try:
         await KRISHNA.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
@@ -59,6 +60,7 @@ async def init():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 
 
 

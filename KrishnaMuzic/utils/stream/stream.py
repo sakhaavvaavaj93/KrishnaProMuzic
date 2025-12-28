@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 
 import config
 from KrishnaMuzic import Carbon, YouTube, app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import db
 from KrishnaMuzic.utils.database import add_active_video_chat, is_active_chat
 from KrishnaMuzic.utils.exceptions import AssistantErr
@@ -465,5 +465,6 @@ async def stream(
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
             await mystic.delete()
+
 
 

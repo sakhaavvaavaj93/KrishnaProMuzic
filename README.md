@@ -1,15 +1,9 @@
-<h1 align="center">🎵 ISTKHAR Music Bot 🎵</h1>
+<h1 align="center">🎵 KRISHNA PRO MUZIC 🎵</h1>
 
 <p align="center">
   <img src="https://graph.org/file/99bc766436a0fe5340e57-8ab82d1d6680734ebc.jpg" alt="Krishna">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/TeamISTKHAR/IstkharMusic?style=for-the-badge&color=blue" alt="GitHub stars">
-  <img src="https://img.shields.io/github/forks/TeamISTKHAR/IstkharMusic?style=for-the-badge&color=blue" alt="GitHub forks">
-  <img src="https://img.shields.io/github/issues/TeamISTKHAR/IstkharMusic?style=for-the-badge&color=red" alt="GitHub issues">
-  <img src="https://img.shields.io/github/license/TeamISTKHAR/IstkharMusic?style=for-the-badge&color=green" alt="GitHub license">
-</p>
 
 <h2 align="center">Delivering Superior Music Experience to Telegram</h2>
 
@@ -71,7 +65,7 @@ Manage keys from our official dashboard (no Telegram DMs needed):
 - 🔄 **Daily Reset**: All limits reset at midnight (IST).  
 - 🎧🎬 **Audio + Video**: Fully supported via API (vPlay).  
 - 🍪 **Fallback**: Add local **custom cookies** if you prefer not to use the API (works for both audio & video).  
-- 💬 **Support**: Join the [API Community Group](https://t.me/+DXGe6UE90y01NDVl).  
+- 💬 **Support**: Join the [KURUKSHETHRA](https://t.me/KURUK_SHE_TRA).  
 
 ---
 
@@ -96,7 +90,7 @@ API_KEY=your-api-key-here
 ---
 
 ## 🚀 Deploy on Heroku 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/CyberPixelPro/IstkharMusic)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/sakhaavvaavaj93/KrishnaProMuzic)
 
 ---
 
@@ -159,22 +153,8 @@ The ISTKHAR Music Bot offers a range of commands to enhance your music listening
 | `/stop`                 | Stop the bot and clear the queue.           |
 | `/queue`                | Display the list of songs in the queue.     |
 
-For a full list of commands, use `/help` in [telegram](https://t.me/ISTKHARBeatzBot).
+For a full list of commands, use `/help` in [telegram](https://t.me/Stenzle_Mariabot).
 
----
-
-### 🔄 Updates & Support
-
-Stay updated with the latest features and improvements to ISTKHAR Music Bot:
-
-<p align="center">
-  <a href="https://telegram.me/NexGenBotsIndia">
-    <img src="https://img.shields.io/badge/Join-Support%20Group-blue?style=for-the-badge&logo=telegram">
-  </a>
-  <a href="https://telegram.me/NexGenBots">
-    <img src="https://img.shields.io/badge/Join-Update%20Channel-blue?style=for-the-badge&logo=telegram">
-  </a>
-</p>
 
 ---
 

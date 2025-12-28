@@ -7,7 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from KrishnaMuzic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.utils import seconds_to_min, time_to_seconds
 from KrishnaMuzic.utils.channelplay import get_channeplayCB
 from KrishnaMuzic.utils.decorators.language import languageCB
@@ -671,5 +671,6 @@ async def slider_queries(client, CallbackQuery, _):
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
+
 
 

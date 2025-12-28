@@ -2,14 +2,14 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
-from IstkharMusic import YouTube, app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import get_loop
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup, stream_markup
-from IstkharMusic.utils.stream.autoclear import auto_clean
-from IstkharMusic.utils.thumbnails import gen_thumb
+from KrishnaMuzic import YouTube, app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.database import get_loop
+from KrishnaMuzic.utils.decorators import AdminRightsCheck
+from KrishnaMuzic.utils.inline import close_markup, stream_markup
+from KrishnaMuzic.utils.stream.autoclear import auto_clean
+from KrishnaMuzic.utils.thumbnails import gen_thumb
 from config import BANNED_USERS
 
 
@@ -46,7 +46,7 @@ async def skip(cli, message: Message, _, chat_id):
                         reply_markup=close_markup(_),
                     )
                     try:
-                        return await ISTKHAR.stop_stream(chat_id)
+                        return await KRISHNA.stop_stream(chat_id)
                     except:
                         return
             else:
@@ -65,7 +65,7 @@ async def skip(cli, message: Message, _, chat_id):
                 reply_markup=close_markup(_),
             )
             try:
-                return await ISTKHAR.stop_stream(chat_id)
+                return await KRISHNA.stop_stream(chat_id)
             except:
                 return
     queued = check[0]["file"]
@@ -90,7 +90,7 @@ async def skip(cli, message: Message, _, chat_id):
             except:
                 image = None
             try:
-                await ISTKHAR.skip_stream(chat_id, link, video=status, image=image)
+                await KRISHNA.skip_stream(chat_id, link, video=status, image=image)
             except:
                 return await message.reply_text(_["call_6"])
             await send_now_playing(message, videoid, title, check[0]["dur"], user, _, chat_id, "tg")
@@ -108,7 +108,7 @@ async def skip(cli, message: Message, _, chat_id):
             except:
                 image = None
             try:
-                await ISTKHAR.skip_stream(chat_id, file_path, video=status, image=image)
+                await KRISHNA.skip_stream(chat_id, file_path, video=status, image=image)
             except:
                 return await mystic.edit_text(_["call_6"])
             await mystic.delete()
@@ -139,7 +139,7 @@ async def skip(cli, message: Message, _, chat_id):
                 except:
                     image = None
             try:
-                await ISTKHAR.skip_stream(chat_id, queued, video=status, image=image)
+                await KRISHNA.skip_stream(chat_id, queued, video=status, image=image)
             except:
                 return await message.reply_text(_["call_6"])
             
@@ -179,4 +179,5 @@ async def send_custom_ui(message, audio_img, video_img, streamtype, link, title,
         reply_markup=InlineKeyboardMarkup(button),
     )
     db[chat_id][0]["mystic"] = run
+
     db[chat_id][0]["markup"] = "tg"

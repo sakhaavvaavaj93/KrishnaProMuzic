@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from KrishnaMuzic import YouTube, app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import db
 from KrishnaMuzic.utils import AdminRightsCheck, seconds_to_min
 from KrishnaMuzic.utils.inline import close_markup
@@ -78,3 +78,4 @@ async def seek_comm(cli, message: Message, _, chat_id):
         reply_markup=close_markup(_),
 
     )
+

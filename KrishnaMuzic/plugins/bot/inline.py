@@ -5,8 +5,8 @@ from pyrogram.types import (
 )
 from py_yt import VideosSearch
 
-from IstkharMusic import app
-from IstkharMusic.utils.inlinequery import answer
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.inlinequery import answer
 from config import BANNED_USERS
 
 
@@ -66,3 +66,4 @@ async def inline_query_handler(client, query):
             return await client.answer_inline_query(query.id, results=answers)
         except:
             return
+

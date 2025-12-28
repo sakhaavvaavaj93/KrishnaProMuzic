@@ -5,7 +5,8 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from KrishnaMuzic import app
 from KrishnaMuzic.misc import db
-from KrishnaMuzic.core.call import KRISHNA, autoend, counter
+from KrishnaMuzic.core.call import autoend, counter
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.utils.database import get_client, set_loop, is_active_chat, is_autoend, is_autoleave
 import logging
 
@@ -104,4 +105,5 @@ async def auto_end():
 
 
 asyncio.create_task(auto_end())
+
 

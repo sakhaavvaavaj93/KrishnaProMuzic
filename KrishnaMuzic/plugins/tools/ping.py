@@ -3,11 +3,11 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.utils import bot_sys_stats
-from IstkharMusic.utils.decorators.language import language
-from IstkharMusic.utils.inline import supp_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.utils import bot_sys_stats
+from KrishnaMuzic.utils.decorators.language import language
+from KrishnaMuzic.utils.inline import supp_markup
 from config import BANNED_USERS, PING_IMG_URL
 
 
@@ -19,10 +19,11 @@ async def ping_com(client, message: Message, _):
         photo=PING_IMG_URL,
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await ISTKHAR.ping()
+    pytgping = await KRISHNA.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
         _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping),
         reply_markup=supp_markup(_),
     )
+

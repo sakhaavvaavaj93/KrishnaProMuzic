@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
@@ -37,3 +37,4 @@ async def maintenance(client, message: Message):
             await message.reply_text(_["maint_5"])
     else:
         await message.reply_text(usage)
+

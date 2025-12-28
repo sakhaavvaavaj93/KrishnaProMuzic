@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.misc import db
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.decorators import AdminRightsCheck
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -31,3 +31,4 @@ async def admins(Client, message: Message, _, chat_id):
     await message.reply_text(
         _["admin_16"].format(message.from_user.mention), reply_markup=close_markup(_)
     )
+

@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.utils.database import is_music_playing, music_on
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.utils.database import is_music_playing, music_on
+from KrishnaMuzic.utils.decorators import AdminRightsCheck
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -16,10 +16,11 @@ async def resume_com(cli, message: Message, _, chat_id):
         return await message.reply_text(_["admin_3"])
     await music_on(chat_id)
     try:
-        await ISTKHAR.resume_stream(chat_id)
+        await KRISHNA.resume_stream(chat_id)
     except Exception:
         pass
     await message.reply_text(
         _["admin_4"].format(message.from_user.mention),
         reply_markup=close_markup(_)
+
     )

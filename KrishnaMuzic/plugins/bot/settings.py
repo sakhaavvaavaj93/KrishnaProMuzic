@@ -8,8 +8,8 @@ from pyrogram.types import (
     Message,
 )
 
-from IstkharMusic import app
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.database import (
     add_nonadmin_chat,
     get_authuser,
     get_authuser_names,
@@ -25,16 +25,16 @@ from IstkharMusic.utils.database import (
     skip_off,
     skip_on,
 )
-from IstkharMusic.utils import bot_sys_stats
-from IstkharMusic.utils.decorators.admins import ActualAdminCB
-from IstkharMusic.utils.decorators.language import language, languageCB
-from IstkharMusic.utils.inline.settings import (
+from KrishnaMuzic.utils import bot_sys_stats
+from KrishnaMuzic.utils.decorators.admins import ActualAdminCB
+from KrishnaMuzic.utils.decorators.language import language, languageCB
+from KrishnaMuzic.utils.inline.settings import (
     auth_users_markup,
     playmode_users_markup,
     setting_markup,
     vote_mode_markup,
 )
-from IstkharMusic.utils.inline.start import private_panel
+from KrishnaMuzic.utils.inline.start import private_panel
 from config import BANNED_USERS, OWNER_ID
 
 async def answer_callback(query: CallbackQuery, text: str, alert: bool = False):
@@ -277,3 +277,4 @@ async def handle_vote_toggle(client, CallbackQuery, _):
         )
     except MessageNotModified:
         return
+

@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from IstkharMusic import Carbon, YouTube, app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import add_active_video_chat, is_active_chat
-from IstkharMusic.utils.exceptions import AssistantErr
-from IstkharMusic.utils.inline import aq_markup, close_markup, stream_markup
-from IstkharMusic.utils.pastebin import ISTKHARBin
-from IstkharMusic.utils.stream.queue import put_queue, put_queue_index
-from IstkharMusic.utils.thumbnails import gen_thumb
+from KrishnaMuzic import Carbon, YouTube, app
+from KrishnaMuzic.core.call import ISTKHAR
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.database import add_active_video_chat, is_active_chat
+from KrishnaMuzic.utils.exceptions import AssistantErr
+from KrishnaMuzic.utils.inline import aq_markup, close_markup, stream_markup
+from KrishnaMuzic.utils.pastebin import ISTKHARBin
+from KrishnaMuzic.utils.stream.queue import put_queue, put_queue_index
+from KrishnaMuzic.utils.thumbnails import gen_thumb
 
 
 async def stream(
@@ -465,3 +465,4 @@ async def stream(
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
             await mystic.delete()
+

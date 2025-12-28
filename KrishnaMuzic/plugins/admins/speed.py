@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
-from IstkharMusic import app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.misc import SUDOERS, db
-from IstkharMusic.utils import AdminRightsCheck
-from IstkharMusic.utils.database import is_active_chat, is_nonadmin_chat
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.inline import close_markup, speed_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.misc import SUDOERS, db
+from KrishnaMuzic.utils import AdminRightsCheck
+from KrishnaMuzic.utils.database import is_active_chat, is_nonadmin_chat
+from KrishnaMuzic.utils.decorators.language import languageCB
+from KrishnaMuzic.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 checker = []
 
@@ -30,7 +30,7 @@ async def playback(cli, message: Message, _, chat_id):
         speed_input = message.text.split(None, 1)[1].strip()
         msg = await message.reply_text(_["admin_31"])
         try:
-            await ISTKHAR.speedup_stream(
+            await KRISHNA.speedup_stream(
                 chat_id,
                 file_path,
                 speed_input, 
@@ -120,3 +120,4 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_34"].format(speed, CallbackQuery.from_user.mention),
         reply_markup=close_markup(_),
     )
+

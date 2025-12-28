@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from IstkharMusic import YouTube, app
-from IstkharMusic.misc import SUDOERS
-from IstkharMusic.utils.database import (
+from KrishnaMuzic import YouTube, app
+from KrishnaMuzic.misc import SUDOERS
+from KrishnaMuzic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from IstkharMusic.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from IstkharMusic.utils.inline import botplaylist_markup
+from KrishnaMuzic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
 
@@ -194,3 +194,4 @@ def PlayWrapper(command):
         )
 
     return wrapper
+

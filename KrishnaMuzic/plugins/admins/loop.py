@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.utils.database import get_loop, set_loop
-from IstkharMusic.utils.decorators import AdminRightsCheck
-from IstkharMusic.utils.inline import close_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.database import get_loop, set_loop
+from KrishnaMuzic.utils.decorators import AdminRightsCheck
+from KrishnaMuzic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
@@ -47,3 +47,4 @@ async def loop_command(cli, message: Message, _, chat_id):
         )
     else:
         return await message.reply_text(usage)
+

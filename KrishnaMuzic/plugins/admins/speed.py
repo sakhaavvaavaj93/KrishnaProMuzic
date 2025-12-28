@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 from KrishnaMuzic import app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import SUDOERS, db
 from KrishnaMuzic.utils import AdminRightsCheck
 from KrishnaMuzic.utils.database import is_active_chat, is_nonadmin_chat
@@ -120,4 +120,5 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_34"].format(speed, CallbackQuery.from_user.mention),
         reply_markup=close_markup(_),
     )
+
 

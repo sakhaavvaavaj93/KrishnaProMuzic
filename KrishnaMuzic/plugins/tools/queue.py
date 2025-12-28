@@ -6,12 +6,12 @@ from pyrogram.errors import FloodWait
 from pyrogram.types import CallbackQuery, InputMediaPhoto, Message
 
 import config
-from IstkharMusic import app
-from IstkharMusic.misc import db
-from IstkharMusic.utils import ISTKHARBin, get_channeplayCB, seconds_to_min
-from IstkharMusic.utils.database import get_cmode, is_active_chat, is_music_playing
-from IstkharMusic.utils.decorators.language import language, languageCB
-from IstkharMusic.utils.inline import queue_back_markup, queue_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils import KRISHNABin, get_channeplayCB, seconds_to_min
+from KrishnaMuzic.utils.database import get_cmode, is_active_chat, is_music_playing
+from KrishnaMuzic.utils.decorators.language import language, languageCB
+from KrishnaMuzic.utils.inline import queue_back_markup, queue_markup
 from config import BANNED_USERS
 
 basic = {}
@@ -174,7 +174,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             return await CallbackQuery.edit_message_text(msg, reply_markup=buttons)         
         if "✨" in msg:
             msg = msg.replace("✨", "")           
-        link = await ISTKHARBin(msg)
+        link = await KRISHNABin(msg)
         med = InputMediaPhoto(media=link, caption=_["queue_3"].format(link))
         await CallbackQuery.edit_message_media(media=med, reply_markup=buttons)
     else:
@@ -263,4 +263,5 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
                 else:
                     break
         except:
+
             return

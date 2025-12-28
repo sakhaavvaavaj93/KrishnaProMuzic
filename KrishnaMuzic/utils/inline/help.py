@@ -2,7 +2,7 @@ from typing import Union
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from IstkharMusic import app
+from KrishnaMuzic import app
 
 
 def help_pannel(_, START: Union[bool, int] = None):
@@ -116,3 +116,4 @@ def private_help_panel(_):
         ],
     ]
     return buttons
+

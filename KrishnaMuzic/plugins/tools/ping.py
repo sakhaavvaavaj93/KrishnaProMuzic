@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from KrishnaMuzic import app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.utils import bot_sys_stats
 from KrishnaMuzic.utils.decorators.language import language
 from KrishnaMuzic.utils.inline import supp_markup
@@ -26,4 +26,5 @@ async def ping_com(client, message: Message, _):
         _["ping_2"].format(resp, app.mention, UP, RAM, CPU, DISK, pytgping),
         reply_markup=supp_markup(_),
     )
+
 

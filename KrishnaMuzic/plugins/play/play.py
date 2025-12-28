@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from IstkharMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from IstkharMusic.core.call import ISTKHAR
-from IstkharMusic.utils import seconds_to_min, time_to_seconds
-from IstkharMusic.utils.channelplay import get_channeplayCB
-from IstkharMusic.utils.decorators.language import languageCB
-from IstkharMusic.utils.decorators.play import PlayWrapper
-from IstkharMusic.utils.formatters import formats
-from IstkharMusic.utils.inline import (
+from KrishnaMuzic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.utils import seconds_to_min, time_to_seconds
+from KrishnaMuzic.utils.channelplay import get_channeplayCB
+from KrishnaMuzic.utils.decorators.language import languageCB
+from KrishnaMuzic.utils.decorators.play import PlayWrapper
+from KrishnaMuzic.utils.formatters import formats
+from KrishnaMuzic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from IstkharMusic.utils.logger import play_logs
-from IstkharMusic.utils.stream.stream import stream
+from KrishnaMuzic.utils.logger import play_logs
+from KrishnaMuzic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
@@ -293,7 +293,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await ISTKHAR.stream_call(url)
+                await KRISHNA.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -521,7 +521,7 @@ async def anonymous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("ISTKHARPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("KRISHNAPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
@@ -671,4 +671,5 @@ async def slider_queries(client, CallbackQuery, _):
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
         )
+
 

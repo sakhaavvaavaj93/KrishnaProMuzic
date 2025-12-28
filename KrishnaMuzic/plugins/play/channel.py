@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from IstkharMusic import app
-from IstkharMusic.utils.database import set_cmode
-from IstkharMusic.utils.decorators.admins import AdminActual
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.database import set_cmode
+from KrishnaMuzic.utils.decorators.admins import AdminActual
 from config import BANNED_USERS
 
 
@@ -47,3 +47,4 @@ async def playmode_(client, message: Message, _):
             return await message.reply_text(_["cplay_6"].format(chat.title, cusn))
         await set_cmode(message.chat.id, chat.id)
         return await message.reply_text(_["cplay_3"].format(chat.title, chat.id))
+

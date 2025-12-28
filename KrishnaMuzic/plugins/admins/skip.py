@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from KrishnaMuzic import YouTube, app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import db
 from KrishnaMuzic.utils.database import get_loop
 from KrishnaMuzic.utils.decorators import AdminRightsCheck
@@ -181,3 +181,4 @@ async def send_custom_ui(message, audio_img, video_img, streamtype, link, title,
     db[chat_id][0]["mystic"] = run
 
     db[chat_id][0]["markup"] = "tg"
+

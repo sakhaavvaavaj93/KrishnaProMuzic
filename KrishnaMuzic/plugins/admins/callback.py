@@ -4,7 +4,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from KrishnaMuzic import YouTube, app
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import SUDOERS, db
 from KrishnaMuzic.utils.database import (
     get_active_chats,
@@ -395,4 +395,5 @@ async def markup_timer():
 
 
 asyncio.create_task(markup_timer())
+
 

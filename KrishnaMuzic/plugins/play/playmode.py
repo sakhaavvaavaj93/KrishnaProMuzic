@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from IstkharMusic import app
-from IstkharMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from IstkharMusic.utils.decorators import language
-from IstkharMusic.utils.inline.settings import playmode_users_markup
+from KrishnaMuzic import app
+from KrishnaMuzic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from KrishnaMuzic.utils.decorators import language
+from KrishnaMuzic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
@@ -31,3 +31,4 @@ async def playmode_(client, message: Message, _):
         _["play_22"].format(message.chat.title),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
+

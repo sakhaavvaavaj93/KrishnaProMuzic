@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from KrishnaMuzic import LOGGER, app, userbot
-from KrishnaMuzic.core.call import KRISHNA
+from KrishnaMuzic.core.bot import KRISHNA
 from KrishnaMuzic.misc import sudo
 from KrishnaMuzic.plugins import ALL_MODULES
 from KrishnaMuzic.utils.database import get_banned_users, get_gbanned
@@ -60,5 +60,6 @@ async def init():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 
 

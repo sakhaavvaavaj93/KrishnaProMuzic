@@ -1,7 +1,7 @@
 import asyncio
 
-from IstkharMusic.misc import db
-from IstkharMusic.utils.database import get_active_chats, is_music_playing
+from KrishnaMuzic.misc import db
+from KrishnaMuzic.utils.database import get_active_chats, is_music_playing
 
 
 async def timer():
@@ -22,3 +22,4 @@ async def timer():
 
 
 asyncio.create_task(timer())
+

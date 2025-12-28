@@ -2,7 +2,7 @@ from os import path
 
 from yt_dlp import YoutubeDL
 
-from IstkharMusic.utils.formatters import seconds_to_min
+from KrishnaMuzic.utils.formatters import seconds_to_min
 
 
 class SoundAPI:
@@ -37,3 +37,4 @@ class SoundAPI:
             "filepath": xyz,
         }
         return track_details, xyz
+

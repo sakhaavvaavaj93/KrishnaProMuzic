@@ -1,15 +1,18 @@
-# Use the desired base image
+# Use the official Python 3.13 slim image
 FROM python:3.13-slim
 
-# Install git using the Debian package manager (apt)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+# Install git and clean up in one single layer
+# This ensures git is available in the PATH for GitPython
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    rm -rf /var/lib/apt/lists/*
 
-# Your application setup follows...
-COPY . /app
+# Application setup
 WORKDIR /app
-RUN pip install -r requirements.txt
+COPY . /app
+
+# Install Python dependencies (including gitpython)
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Start command
 CMD ["bash", "start"]
-
-

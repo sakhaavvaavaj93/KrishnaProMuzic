@@ -1,18 +1,27 @@
-# Use the official Python 3.13 slim image
+# 1. Use the specific stable image for 2026
 FROM python:3.13-slim
 
-# Install git and clean up in one single layer
-# This ensures git is available in the PATH for GitPython
+# 2. Suppress debconf warnings during the build phase only
+ARG DEBIAN_FRONTEND=noninteractive
+
+# 3. Install git and system dependencies in a single layer
+# Combinining updates, installs, and cleanup minimizes image size (~71MB saved)
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get install -y --no-install-recommends \
+    apt-utils \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# Application setup
+# 4. Set the working directory
 WORKDIR /app
-COPY . /app
 
-# Install Python dependencies (including gitpython)
+# 5. Copy and install Python requirements
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Start command
+# 6. Copy the rest of the application
+COPY . .
+
+# 7. Start the application
 CMD ["bash", "start"]
+

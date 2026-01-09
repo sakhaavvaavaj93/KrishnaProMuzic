@@ -1,20 +1,15 @@
+# Use the desired base image
 FROM python:3.13-slim
-RUN apt-get update && apt-get install -y \
+
+# Install git using the Debian package manager (apt)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    git ffmpeg curl && \
-    rm -rf /var/lib/apt/lists/*
-RUN apt-get update && apt-get install -y git
-
+# Your application setup follows...
+COPY . /app
 WORKDIR /app
-
-COPY . /app/
-
-RUN pip install --no-cache-dir -U pip && \
-    pip install --no-cache-dir -r requirements.txt
-
+RUN pip install -r requirements.txt
 CMD ["bash", "start"]
 
 

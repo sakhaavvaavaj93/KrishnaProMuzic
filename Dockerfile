@@ -1,11 +1,11 @@
 FROM python:3.13-slim
 
-# Disable debconf warnings globally
-ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive \
+    DEBCONF_NONINTERACTIVE_SEEN=true \
+    TERM=dumb
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        apt-utils \
         git \
     && rm -rf /var/lib/apt/lists/*
 
@@ -15,4 +15,5 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["bash", "start"]
+
 

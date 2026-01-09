@@ -7,18 +7,13 @@ RUN apt-get update && \
         bash \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        git \
-        bash \
-    && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 COPY . /app
 
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["bash", "start"]
+
 
 
 

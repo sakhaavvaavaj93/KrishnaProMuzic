@@ -1,8 +1,11 @@
 FROM python:3.13-slim
 
-ENV DEBIAN_FRONTEND=noninteractive \
-    DEBCONF_NONINTERACTIVE_SEEN=true \
-    TERM=xterm
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        -o Dpkg::Use-Pty=0 \
+        git \
+        bash \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -16,5 +19,6 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["bash", "start"]
+
 
 

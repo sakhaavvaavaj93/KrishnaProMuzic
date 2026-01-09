@@ -1,5 +1,5 @@
 FROM python:3.12-slim
-
+RUN pip install gitpython
 # 1. Pre-seed debconf to force Noninteractive mode at the system level
 # This silences the "Dialog" and "Readline" frontend warnings reliably
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
@@ -21,6 +21,7 @@ WORKDIR /app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 CMD ["bash", "start"]
+
 
 
 

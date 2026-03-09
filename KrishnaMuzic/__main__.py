@@ -1,7 +1,5 @@
 import asyncio
 import importlib
-from flask import Flask
-import threading
 from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 import config
@@ -11,22 +9,6 @@ from KrishnaMuzic.misc import sudo
 from KrishnaMuzic.plugins import ALL_MODULES
 from KrishnaMuzic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-
-
-app = Flask(__name__)
-
-@app.route('/')
-def health_check():
-    return "Bot is running!"
-
-def run_web():
-    # Render provides the PORT environment variable
-    import os
-    port = int(os.environ.get("PORT", 8000))
-    app.run(host='0.0.0.0', port=port)
-
-# Start the web server in a separate thread
-threading.Thread(target=run_web, daemon=True).start()
 
 async def init():
     if (
@@ -78,6 +60,7 @@ async def init():
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
+
 
 
 
